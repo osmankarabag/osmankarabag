@@ -2,7 +2,7 @@
 
 **Görüntü işleme** ve **veri bilimi** alanlarında çalışıyorum. Derin öğrenme ile görüntülerden anlam çıkaran ve veriden tahmin üreten uçtan uca projeler geliştiriyorum. Modeli eğitmekle kalmıyor, API ve arayüzle kullanılabilir hâle getiriyorum.
 
-- 🖼️ **Odak:** Görüntü sınıflandırma (CNN), görüntü ön işleme, modelin servis edilmesi
+- 🖼️ **Odak:** Nesne tespiti (YOLO), görüntü sınıflandırma (CNN), gerçek zamanlı görüntü işleme
 - 📊 **Veri bilimi:** Keşifsel veri analizi, öznitelik mühendisliği, gradient boosting, hiperparametre optimizasyonu
 - 🤝 **Ekip çalışması:** YZTA Bootcamp'te Scrum Master
 - 🔌 **Ek olarak:** Arduino ve IoT ile gömülü sistemler
@@ -18,6 +18,8 @@
 **Görüntü işleme / derin öğrenme**
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-111F68?style=flat-square)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
 ![Pillow](https://img.shields.io/badge/Pillow-3776AB?style=flat-square&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 
@@ -45,6 +47,17 @@
 ---
 
 ## 🖼️ Görüntü İşleme
+
+### [🎯 YOLOv8 ile Gerçek Zamanlı Yüz Takip Sistemi](https://github.com/osmankarabag/realtime-face-tracking-yolov8)
+*Ekip projesi · Görüntü işleme tarafı*
+
+Yüzü tespit edip PID kontrollü pan-tilt kamerayla sürekli görüntünün merkezinde tutan otonom takip sistemi.
+- **YOLOv8n** ile transfer learning: tek sınıflı yüz dedektörü (precision 0.88, mAP50 0.75)
+- Gerçek zamanlı tespit hattı: OpenCV ile kare yakalama, kutu merkezi hesaplama, görselleştirme
+- X ve Y eksenleri için PID kontrol, seri port üzerinden **Arduino + 2 servo**
+- Hata, güven skoru ve servo açısı zaman serisi analizi
+
+`YOLOv8` `Object Detection` `OpenCV` `PID` `Arduino`
 
 ### [🌱 AgroKlinik: Yapay Zeka ile Bitki Hastalığı Teşhisi](https://github.com/Sltsn/YZTA-Bootcamp-AgroKlinik)
 *YZTA Bootcamp ekip projesi · Scrum Master*
